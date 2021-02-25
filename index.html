@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clash of JS NewBies</title>
+  </head>
+  <body>
+    <header>
+      <h1>Clash of JS NewBies</h1>
+    </header>
+    <article id="creation">
+      <section id="vs1">
+        <h2>Player 1</h2>
+        <section id="player1">
+          <form class="form">
+            <label for="name">What's gone be your Hero's name?:</label>
+            <input type="text" name="name" class="name1" autocomplete="off" />
+            <label for="hero">Choose your Hero:</label>
+            <select name="hero" class="hero">
+              <option value="humans" id="humans">Humans</option>
+              <option value="orcs" id="orcs">Orcs</option>
+              <option value="elves" id="elves">Elves</option>
+              <option value="vampires" id="vampires">Vampires</option>
+            </select>
+          </form>
+          <aside id="aside_humans">
+            <h3>Humans</h3>
+            <img src="logos/humans.png" alt="humans picture" />
+            <p>20% less damage taken.</p>
+          </aside>
+          <aside id="aside_orcs">
+            <h3>Orcs</h3>
+            <img src="logos/orc.png" alt="Orcs picture" />
+            <p>40% more max health</p>
+          </aside>
+          <aside id="aside_elves">
+            <h3>Elves</h3>
+            <img src="logos/elves.png" alt="Orcs picture" />
+            <p>
+              30% chance to deflect the attack back to the opponent. <br />
+              The attacker takes damage equal to 50% of the original hit. The
+              elf takes no damage.
+            </p>
+          </aside>
+          <aside id="aside_vampires">
+            <h3>Ragnar</h3>
+            <img src="logos/vampires.png" alt="Orcs picture" />
+            <p>
+              10% lifesteal from opponents current health at start of the
+              vampire's turn.
+            </p>
+          </aside>
+        </section>
+        <h2>Items</h2>
+        <section class="items">
+          <button type="submit" value="boots">
+            <h4>Boots</h4>
+            <img src="Logos/boots.png" alt="Boots" />
+            <p class="specs">30% chance to dodge an attack</p>
+          </button>
+          <button type="submit" value="staff">
+            <h4>Staff</h4>
+            <img src="Logos/staff.png" alt="Staff" />
+            <p class="specs">20% increase in healing</p>
+          </button>
+          <button type="submit" value="sword">
+            <h4>sword</h4>
+            <img src="Logos/sword.png" alt="Sword" />
+            <p class="specs">30% more damage</p>
+          </button>
+          <button type="submit" value="Bow">
+            <h4>Bow</h4>
+            <img src="Logos/bow.png" alt="Bow" />
+            <p class="specs">30% chance to attack twice</p>
+          </button>
+        </section>
+        <button type="submit" class="button1">Let's go!</button>
+      </section>
+
+      <!-- VS1 --------------------------------------->
+
+      <!-- vs2 ----------------------------------------->
+
+      <section id="vs2">
+        <h2>Player 2</h2>
+        <section id="player2">
+          <form class="form">
+            <label for="name">What's gone be your Hero's name?:</label>
+            <input type="text" name="name" class="name2" autocomplete="off" />
+            <label for="hero">Choose your Hero:</label>
+            <select name="hero" class="hero">
+              <option value="humans" id="humans">Humans</option>
+              <option value="orcs" id="orcs">Orcs</option>
+              <option value="elves" id="elves">Elves</option>
+              <option value="vampires" id="vampires">Vampires</option>
+            </select>
+          </form>
+          <aside id="aside_humans">
+            <h3>Humans</h3>
+            <img src="logos/humans.png" alt="humans picture" />
+            <p>20% less damage taken.</p>
+          </aside>
+          <aside id="aside_orcs">
+            <h3>Orcs</h3>
+            <img src="logos/orc.png" alt="Orcs picture" />
+            <p>40% more max health.</p>
+          </aside>
+          <aside id="aside_elves">
+            <h3>Elves</h3>
+            <img src="logos/elves.png" alt="Orcs picture" />
+            <p>
+              30% chance to deflect the attack back to the opponent. <br />The
+              attacker takes damage equal to 50% of the original hit. The elf
+              takes no damage.
+            </p>
+          </aside>
+          <aside id="aside_vampires">
+            <h3>Vampire</h3>
+            <img src="logos/vampires.png" alt="Orcs picture" />
+            <p>
+              10% lifesteal from opponents current health at start of the
+              vampire's turn.
+            </p>
+          </aside>
+        </section>
+        <h2>Items</h2>
+        <section class="items">
+          <button type="submit">
+            <h4>Boots</h4>
+            <img src="Logos/boots.png" alt="Boots" />
+            <p class="specs">30% chance to dodge an attack</p>
+          </button>
+          <button type="submit">
+            <h4>Staff</h4>
+            <img src="Logos/staff.png" alt="Staff" />
+            <p class="specs">20% increase in healing</p>
+          </button>
+          <button type="submit">
+            <h4>Sword</h4>
+            <img src="Logos/sword.png" alt="Sword" />
+            <p class="specs">30% more damage</p>
+          </button>
+          <button type="submit">
+            <h4>Bow</h4>
+            <img src="Logos/bow.png" alt="Bow" />
+            <p class="specs">30% chance to attack twice</p>
+          </button>
+        </section>
+        <button type="submit" class="button2">Let's go!</button>
+      </section>
+    </article>
+
+    <!--  PLAY TIME ----------------------------------->
+
+    <!-- player1 -->
+    <article id="play">
+      <section id="player1P">
+        <h2>Player 1</h2>
+        <section class="log-panel">
+          <label for="log">
+            <p>Log panel</p>
+          </label>
+          <div class="log"></div>
+        </section>
+        <section class="character1"></section>
+        <section class="health-bar">
+          <div class="progress-bar"></div>
+        </section>
+        <section class="moves">
+          <button class="hit">Hit</button>
+          <button class="heal">Heal</button>
+          <button class="yield">Yield</button>
+        </section>
+      </section>
+      <!-- intersection vs -->
+      <section class="intersection">
+        <p>VS</p>
+      </section>
+
+      <!-- player2 -->
+      <section id="player2P">
+        <h2>Player 2</h2>
+        <label for="log">
+          <p>Log panel</p>
+        </label>
+        <div class="log"></div>
+        <section class="character2"></section>
+        <section class="health-bar">
+          <div class="progress-bar"></div>
+        </section>
+        <section class="moves">
+          <button class="hit">Hit</button>
+          <button class="heal">Heal</button>
+          <button class="yield">Yield</button>
+        </section>
+      </section>
+    </article>
+    <!-- script -->
+    <script src="character.js"></script>
+    <script src="script.js"></script>
+    <!-- script -->
+  </body>
+</html>

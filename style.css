@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Akaya Telivigala", cursive;
+}
+
+h2 {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 2rem;
+  font-style: oblique;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+img {
+  height: 300px;
+}
+
+.items img {
+  height: 80px;
+}
+
+#creation,
+#play {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+  color: rgb(1, 0, 63);
+}
+
+label {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.name1,
+.name2 {
+  height: 30px;
+  border: solid 2px #00d1f9;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.name:focus {
+  outline: none;
+}
+
+.hero {
+  height: 30px;
+  background: rgba(0, 29, 69, 0.8);
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: solid 2px #00d1f9;
+  text-align: center;
+}
+
+.hero:focus {
+  outline: none;
+}
+
+#vs1,
+#player1P {
+  grid-column: 1;
+  background-color: rgba(0, 29, 69, 1);
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 0px 0px 30px 20px;
+  color: whitesmoke;
+  border-radius: 40px 0 0 30px;
+  box-shadow: 0 0 10px rgba(0, 29, 69, 1);
+  box-shadow: 8px 0 10px rgba(0, 29, 69, 0.9);
+}
+
+#player1 p,
+#player2 p {
+  font-size: 1.2rem;
+}
+
+.intersection {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 2rem;
+  background-color: rgba(0, 29, 69, 0.6);
+  margin-bottom: 30px;
+}
+
+#vs2,
+#player2P {
+  text-align: center;
+  background-color: rgba(0, 29, 69, 1);
+  padding-bottom: 20px;
+  margin: 0px 30px 30px 0px;
+  padding-bottom: 50px;
+  grid-column: 3/4;
+  color: whitesmoke;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 0 0 10px rgba(0, 29, 69, 1);
+  box-shadow: -8px 0 10px rgba(0, 29, 69, 0.9);
+}
+
+.button1,
+.button2 {
+  height: 45px;
+  width: 60px;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bolder;
+  background-color: rgba(148, 192, 253, 0.8);
+  border: solid 2px #00d1f9;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.button1:focus,
+.button2:focus {
+  outline: none;
+}
+
+.button1:hover,
+.button2:hover {
+  box-shadow: 0px 0px 8px 3px rgba(0, 209, 249, 0.3);
+}
+
+.items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.items :nth-child(3) {
+  width: 60px;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: solid 2px rgba(0, 209, 249, 0.8);
+}
+
+.items button {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items .specs {
+  visibility: hidden;
+  position: absolute;
+}
+
+.items button:hover img {
+  opacity: 0.2;
+}
+
+.items button:hover h4 {
+  opacity: 0.1;
+}
+
+.items button:hover .specs {
+  visibility: visible;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+.log-panel {
+  text-align: center;
+}
+
+.log {
+  width: 350px;
+  height: 100px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+.logModif {
+  color: black;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.logModif p {
+  margin: 0;
+}
+
+.character1 img,
+.character2 img {
+  margin-top: 40px;
+}
+
+.health-bar {
+  width: 300px;
+  height: 20px;
+  margin-bottom: 30px;
+  background-color: wheat;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 20px;
+  border-radius: 20px;
+  background-color: green;
+}
+
+.moves {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.moves button {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: solid 1px #00d1f9;
+}
+
+.moves button:focus {
+  outline: none;
+}
+
+.moves button:active {
+  border: none;
+  margin: 11px;
+}

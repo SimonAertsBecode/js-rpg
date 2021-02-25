@@ -1,0 +1,45 @@
+program a game
+player can use a btn to define which move he's gonne do
+game ends when player is 0 health
+
+STATS
+items: 
+- Boots: 30% chance to dodge an attack
+- Staff: 20% increase of healing
+- Sword: 30% more damage
+- Bow: 30% chance to attack twice
+
+RACE
+- Humans: 20% less damage taken
+- Orcs: 40% more max health
+- Elves: 30% chance to deflect attack back to the opponent. if deflect, the elf takes no damage and the deflected 
+damage is equal to 50% of original hit.
+- Vampires: 10% lifesteals from opponents current health when it's vampire turns
+
+
+Use character.js for establishing variables (ex: he's an Orc and has Boots --> 40% more health AND 20% chance to dodge an attack).
+
+FIRST PART:
+(more visual)
+
+1) Create HTML:
+- Title
+- An element to display both characters stats (visual, name, item, health...) 
+- A panel with 6 buttons, 3 for each player (hit, heal & yield. Those are the moves.)
+- A creation panel with inputs & dropdowns to create your character. (For now only name, items and race )
+- A log that will tell you which move the player made.
+
+2)
+use character.js to set all the stats according to what we chose as hero and items
+
+3)
+make visible only title, vsScreen and input field when creating characters.
+
+4)
+When character is created, creation panel disappear --> moves !and! log should appear.
+
+5) display health bar that should work in real time. make animation for increase/decrease health.
+
+
+SECOND PART
+(more gamelogic)
