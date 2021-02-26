@@ -17,7 +17,7 @@
         <section id="player1">
           <form class="form">
             <label for="name">What's gone be your Hero's name?:</label>
-            <input type="text" name="name" class="name1" autocomplete="off" />
+            <input type="text" name="name" class="name" autocomplete="off" />
             <label for="hero">Choose your Hero:</label>
             <select name="hero" class="hero">
               <option value="humans" id="humans">Humans</option>
@@ -46,7 +46,7 @@
             </p>
           </aside>
           <aside id="aside_vampires">
-            <h3>Ragnar</h3>
+            <h3>Vampires</h3>
             <img src="logos/vampires.png" alt="Orcs picture" />
             <p>
               10% lifesteal from opponents current health at start of the
@@ -55,29 +55,29 @@
           </aside>
         </section>
         <h2>Items</h2>
-        <section class="items">
-          <button type="submit" value="boots">
+        <section class="items1">
+          <button type="button" value="boots">
             <h4>Boots</h4>
             <img src="Logos/boots.png" alt="Boots" />
             <p class="specs">30% chance to dodge an attack</p>
           </button>
-          <button type="submit" value="staff">
+          <button type="button" value="staff">
             <h4>Staff</h4>
             <img src="Logos/staff.png" alt="Staff" />
             <p class="specs">20% increase in healing</p>
           </button>
-          <button type="submit" value="sword">
+          <button type="button" value="sword">
             <h4>sword</h4>
             <img src="Logos/sword.png" alt="Sword" />
             <p class="specs">30% more damage</p>
           </button>
-          <button type="submit" value="Bow">
+          <button type="button" value="bow">
             <h4>Bow</h4>
             <img src="Logos/bow.png" alt="Bow" />
             <p class="specs">30% chance to attack twice</p>
           </button>
         </section>
-        <button type="submit" class="button1">Let's go!</button>
+        <button type="button" class="button1">Let's go!</button>
       </section>
 
       <!-- VS1 --------------------------------------->
@@ -89,7 +89,7 @@
         <section id="player2">
           <form class="form">
             <label for="name">What's gone be your Hero's name?:</label>
-            <input type="text" name="name" class="name2" autocomplete="off" />
+            <input type="text" name="name" class="name" autocomplete="off" />
             <label for="hero">Choose your Hero:</label>
             <select name="hero" class="hero">
               <option value="humans" id="humans">Humans</option>
@@ -118,7 +118,7 @@
             </p>
           </aside>
           <aside id="aside_vampires">
-            <h3>Vampire</h3>
+            <h3>Vampires</h3>
             <img src="logos/vampires.png" alt="Orcs picture" />
             <p>
               10% lifesteal from opponents current health at start of the
@@ -127,23 +127,23 @@
           </aside>
         </section>
         <h2>Items</h2>
-        <section class="items">
-          <button type="submit">
+        <section class="items2">
+          <button type="submit" value="boots">
             <h4>Boots</h4>
             <img src="Logos/boots.png" alt="Boots" />
             <p class="specs">30% chance to dodge an attack</p>
           </button>
-          <button type="submit">
+          <button type="submit" value="staff">
             <h4>Staff</h4>
             <img src="Logos/staff.png" alt="Staff" />
             <p class="specs">20% increase in healing</p>
           </button>
-          <button type="submit">
+          <button type="submit" value="sword">
             <h4>Sword</h4>
             <img src="Logos/sword.png" alt="Sword" />
             <p class="specs">30% more damage</p>
           </button>
-          <button type="submit">
+          <button type="submit" value="bow">
             <h4>Bow</h4>
             <img src="Logos/bow.png" alt="Bow" />
             <p class="specs">30% chance to attack twice</p>
@@ -160,9 +160,7 @@
       <section id="player1P">
         <h2>Player 1</h2>
         <section class="log-panel">
-          <label for="log">
-            <p>Log panel</p>
-          </label>
+          <label for="log"> Log panel </label>
           <div class="log"></div>
         </section>
         <section class="character1"></section>
@@ -183,9 +181,7 @@
       <!-- player2 -->
       <section id="player2P">
         <h2>Player 2</h2>
-        <label for="log">
-          <p>Log panel</p>
-        </label>
+        <label for="log"> Log panel </label>
         <div class="log"></div>
         <section class="character2"></section>
         <section class="health-bar">
@@ -200,7 +196,6 @@
     </article>
     <!-- script -->
     <script src="character.js"></script>
-    <script src="script.js"></script>
     <!-- script -->
   </body>
 </html>

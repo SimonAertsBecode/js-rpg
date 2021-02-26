@@ -1,5 +1,4 @@
 // VS1
-
 const vs1 = document.querySelector("#vs1");
 
 const selection = document.querySelectorAll(".hero");
@@ -86,20 +85,15 @@ const creation = document.querySelector("#creation");
 const play = document.querySelector("#play");
 play.style.display = "none";
 
-const choseItem = document.querySelectorAll(".items");
+const choseItem = document.querySelectorAll(".items1 button");
+console.log(choseItem);
 
-let characterName = document.querySelector(".name1");
+const choseItem1 = document.querySelectorAll(".items2 button");
+console.log(choseItem1);
+
+let characterName = document.querySelectorAll(".name");
 
 let player1 = [];
-
-validation.addEventListener("click", () => {
-  heroSelectionPlayer1();
-  itemsSelectionPlayer1();
-  addPghLog.innerHTML = `hello you i'm a ${player1[0]} and me and my ${player1[1]} we gone destroy you`;
-  // set function to link character 1
-  vs1.style.display = "none";
-  vs2.style.display = "";
-});
 
 function heroSelectionPlayer1() {
   if (selection[0].value === "humans") {
@@ -121,27 +115,17 @@ function heroSelectionPlayer1() {
   }
 }
 
-function itemsSelectionPlayer1() {
-  if (choseItem[0].value === "boots") {
-    player1.push("boots");
-  } else if (choseItem[0].value === "staff") {
-    player1.push("staffs");
-  } else if (choseItem[0].value === "sword") {
-    player1.push("sword");
-  } else {
-    player1.push("bow");
-  }
-}
+validation.addEventListener("click", () => {
+  let persoName = characterName[0].value;
+  heroSelectionPlayer1();
+  addPghLog.innerHTML = `hello you may name is ${persoName} i'm a ${player1[0]} and me and my ${player1[1]} we gone destroy you`;
+  console.log(player1);
+  // set function to link character 1
+  vs1.style.display = "none";
+  vs2.style.display = "";
+});
 
 let player2 = [];
-
-validationNextPage.addEventListener("click", () => {
-  heroSelectionPlayer2();
-  itemsSelectionPlayer2();
-  // set function to link character 2
-  creation.style.display = "none";
-  play.style.display = "";
-});
 
 function heroSelectionPlayer2() {
   if (selection[1].value === "humans") {
@@ -164,16 +148,26 @@ function heroSelectionPlayer2() {
 }
 
 function itemsSelectionPlayer2() {
-  if (choseItem[1].value === "boots") {
+  if (choseItem1.value === "boots") {
     player2.push("boots");
-  } else if (choseItem[1].value === "staff") {
+  } else if (choseItem1.value === "staff") {
     player2.push("staffs");
-  } else if (choseItem[1].value === "sword") {
+  } else if (choseItem1.value === "sword") {
     player2.push("sword");
   } else {
     player2.push("bow");
   }
 }
+
+validationNextPage.addEventListener("click", () => {
+  let persoName1 = characterName[1].value;
+  heroSelectionPlayer2();
+  itemsSelectionPlayer2();
+  addPghLog1.innerHTML = `hello you may name is ${persoName1} i'm a ${player2[0]} and me and my ${player2[1]} we gone destroy you`;
+  // set function to link character 2
+  creation.style.display = "none";
+  play.style.display = "";
+});
 
 //CREATE EL for player 1
 
@@ -197,9 +191,14 @@ const log = document.querySelectorAll(".log");
 
 const addPghLog = document.createElement("p");
 
+const addPghLog1 = document.createElement("p");
+
 let log1 = log[0].append(addPghLog);
 
+let log2 = log[1].append(addPghLog1);
+
 addPghLog.classList.add("logModif");
+addPghLog1.classList.add("logModif");
 
 /*********** promise *****/
 
