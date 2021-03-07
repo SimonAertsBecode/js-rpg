@@ -3,26 +3,98 @@ function Person(race, item, name) {
   this.race = race;
   this.item = item;
   this.name = name;
-  this.currenthealth = 100;
+  this.currentHealth = 100;
   this.maxHealth = 100;
 
   this.min = 3;
   this.maxDamage = 20;
   this.maxHealing = 30;
 
-  this.heal = function () {};
+  if (this.race === "Orcs") {
+    this.maxHealth = 140;
+    this.currentHealth = 140;
+  } else {
+    this.maxHealth = 100;
+    this.currentHealth = 100;
+  }
 
-  this.damage = function () {};
+  this.vampires = function (number, side) {
+    if (this.race === "Vampires" && hit[number].disabled === true) {
+      this.currentHealth += side.currentHealth * 0.1;
+      if (this.currentHealth > this.maxHealth) {
+        this.currentHealth = 100;
+      }
+    } else {
+      this.currentHealth;
+    }
+  };
 
-  this.totalDamage = this.damage();
+  this.heal = function () {
+    this.healPoints = Math.floor(Math.random() * 30 + 1);
+    if (this.item === "staff") {
+      this.healPoints = Math.floor(Math.random() * 30 + 1) * 1.2;
+      this.currentHealth += this.healPoints;
+    } else {
+      this.healPoints = Math.floor(Math.random() * 30 + 1);
+      this.currentHealth += this.healPoints;
+    }
+
+    if (this.currentHealth > this.maxHealth) {
+      this.currentHealth = this.maxHealth;
+    } else {
+      this.currentHealth;
+    }
+  };
+
+  this.damage = function (side2) {
+    let hit = this.min + Math.floor(Math.random() * 20);
+    var chance = Math.floor(Math.random() * 3 + 1);
+
+    if (side2.race === "human") {
+      hit = hit * 0.8;
+    } else if (side2.race === "Elves" && chance === 2) {
+      this.currentHealth -= hit * 0.5;
+    } else {
+      hit = hit;
+    }
+
+    if (side2.item === "boots" && chance === 2) {
+      hit = 0;
+      side2.currentHealth -= hit;
+    } else if (this.item === "sword" && chance === 2) {
+      hit *= 1.3;
+      side2.currentHealth -= hit;
+    } else if (this.item === "bow" && chance === 2) {
+      hit *= 2;
+      side2.currentHealth -= hit;
+    } else {
+      side2.currentHealth -= hit;
+    }
+  };
+
+  this.healthBar = function (barSelection) {
+    healthAnimation[barSelection].style.width = this.currentHealth + "%";
+  };
+
+  this.gameOver = function () {
+    if (this.currentHealth <= 0) {
+      if (
+        confirm("GAME OVER \n" + "Press 'OK' if you want to play again!") ==
+        true
+      ) {
+        location.reload();
+      } else {
+        alert("Was a pleasure to see on our high level RPG!");
+      }
+    }
+  };
 
   this.displayChar = function () {
-    return console.log(
-      `I am a ${this.race}, I wield a ${this.item}, my total health point are ${this.maxHealth}`
-    );
+    return `I am a ${this.race}, I wield a ${this.item}, my total health point are ${this.maxHealth}`;
   };
 }
 
+// healthAnimation[0];
 // VS1
 
 const vs1 = document.querySelector("#vs1");
@@ -154,14 +226,15 @@ function heroSelectionPlayer1() {
 
 let you;
 
+let persoName;
+
+let healthAnimation = document.querySelectorAll(".progress-bar");
+
+let moves = document.querySelectorAll(".moves");
+
 validation.addEventListener("click", () => {
-  let persoName = characterName[0].value;
+  persoName = characterName[0].value;
   heroSelectionPlayer1();
-  addPghLog.innerHTML = `hello you may name is ${persoName} i'm a ${
-    player1[0]
-  } and me and my ${player1[player1.length - 1]} we gone destroy you`;
-  console.log(player1);
-  you = new Person(player1[0], player1[player1.length - 1], persoName);
   vs1.style.display = "none";
   vs2.style.display = "";
 });
@@ -202,15 +275,25 @@ function heroSelectionPlayer2() {
 }
 
 let enemy;
+let persoName1;
+
+const player1Name = document.querySelector("#player1P h2");
+const player2Name = document.querySelector("#player2P h2");
 
 validationNextPage.addEventListener("click", () => {
-  let persoName1 = characterName[1].value;
+  persoName1 = characterName[1].value;
   heroSelectionPlayer2();
-  console.log(player2);
-  addPghLog1.innerHTML = `hello you may name is ${persoName1} i'm a ${
-    player2[0]
-  } and me and my ${player2[player2.length - 1]} we gone destroy you`;
+
+  // perso created
+  player1Name.innerHTML = persoName;
+  player2Name.innerHTML = persoName1;
+  you = new Person(player1[0], player1[player1.length - 1], persoName);
   enemy = new Person(player2[0], player2[player2.length - 1], persoName1);
+  addPghLog.innerHTML = you.displayChar();
+  addPghLog1.innerHTML = enemy.displayChar();
+  enemy.healthBar(1);
+  you.healthBar(0);
+
   creation.style.display = "none";
   play.style.display = "";
 });
@@ -245,3 +328,5 @@ let log2 = log[1].append(addPghLog1);
 
 addPghLog.classList.add("logModif");
 addPghLog1.classList.add("logModif");
+
+// let attack = document.querySelectorAll(".hit");
