@@ -208,19 +208,19 @@ function heroSelectionPlayer1() {
   if (selection[0].value === "humans") {
     player1.unshift("Human");
     injectCharacter.innerHTML =
-      '<img src="logos/humans.png" alt="humans picture" />';
+      '<img src="Logos/humans.png" alt="humans picture" />';
   } else if (selection[0].value === "orcs") {
     player1.unshift("Orcs");
     injectCharacter.innerHTML =
-      '<img src="logos/orc.png" alt="Orcs picture" />';
+      '<img src="Logos/orc.png" alt="Orcs picture" />';
   } else if (selection[0].value === "elves") {
     player1.unshift("Elves");
     injectCharacter.innerHTML =
-      '<img src="logos/elves.png" alt="Orcs picture" />';
+      '<img src="Logos/elves.png" alt="Orcs picture" />';
   } else {
     player1.unshift("Vampires");
     injectCharacter.innerHTML =
-      '<img src="logos/vampires.png" alt="Orcs picture" />';
+      '<img src="Logos/vampires.png" alt="Orcs picture" />';
   }
 }
 
@@ -258,19 +258,19 @@ function heroSelectionPlayer2() {
   if (selection[1].value === "humans") {
     player2.unshift("Human");
     injectCharacter2.innerHTML =
-      '<img src="logos/humans.png" alt="humans picture" />';
+      '<img src="Logos/humans.png" alt="humans picture" />';
   } else if (selection[1].value === "orcs") {
     player2.unshift("Orcs");
     injectCharacter2.innerHTML =
-      '<img src="logos/orc.png" alt="Orcs picture" />';
+      '<img src="Logos/orc.png" alt="Orcs picture" />';
   } else if (selection[1].value === "elves") {
     player2.unshift("Elves");
     injectCharacter2.innerHTML =
-      '<img src="logos/elves.png" alt="Orcs picture" />';
+      '<img src="Logos/elves.png" alt="Orcs picture" />';
   } else {
     player2.unshift("Vampires");
     injectCharacter2.innerHTML =
-      '<img src="logos/vampires.png" alt="Orcs picture" />';
+      '<img src="Logos/vampires.png" alt="Orcs picture" />';
   }
 }
 
