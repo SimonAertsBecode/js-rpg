@@ -1,10 +1,11 @@
 # js-rpg
 
-## Hello there
-
 You can find my super RPG next level just [here](https://simonaertsbecode.github.io/js-rpg/).
 
 **Hope you'll enjoy it!**
+
+How my project works: You will need two players, each in turn will have to chose a name, race and what item he/she wants.
+After that the battle starts.
 
 There's 3 language that have been used to make that RPG, these 3 languages are:
 
@@ -12,7 +13,8 @@ There's 3 language that have been used to make that RPG, these 3 languages are:
 - CSS
 
 > These two language have been used to make the interface of the site
-> <br>
+
+<br>
 
 - Javascript
 
