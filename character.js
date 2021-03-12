@@ -101,26 +101,26 @@ const vs1 = document.querySelector("#vs1");
 
 const selection = document.querySelectorAll(".hero");
 
-const orcsSelected = document.querySelectorAll("#aside_orcs");
+const orcsSelected = document.querySelectorAll(".aside_orcs");
 for (var i = 0; i < orcsSelected.length; i++) {
   orcsSelected[i].style.display = "none";
 }
 
-const humansSelected = document.querySelectorAll("#aside_humans");
+const humansSelected = document.querySelectorAll(".aside_humans");
 for (var i = 0; i < humansSelected.length; i++) {
   humansSelected[i].style.display = "";
 }
-const elvesSelected = document.querySelectorAll("#aside_elves");
+const elvesSelected = document.querySelectorAll(".aside_elves");
 for (var i = 0; i < orcsSelected.length; i++) {
   elvesSelected[i].style.display = "none";
 }
-const vampiresSelected = document.querySelectorAll("#aside_vampires");
+const vampiresSelected = document.querySelectorAll(".aside_vampires");
 for (var i = 0; i < orcsSelected.length; i++) {
   vampiresSelected[i].style.display = "none";
 }
 
 selection[0].addEventListener("change", () => {
-  if (selection[0].value === "orcs") {
+  if (selection.value === "orcs") {
     orcsSelected[0].style.display = "";
     humansSelected[0].style.display = "none";
     elvesSelected[0].style.display = "none";

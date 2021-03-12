@@ -17,27 +17,33 @@
         <section id="player1">
           <form class="form">
             <label for="name">What's gone be your Hero's name?:</label>
-            <input type="text" name="name" class="name" autocomplete="off" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="name"
+              autocomplete="off"
+            />
             <label for="hero">Choose your Hero:</label>
-            <select name="hero" class="hero">
-              <option value="humans" id="humans">Humans</option>
-              <option value="orcs" id="orcs">Orcs</option>
-              <option value="elves" id="elves">Elves</option>
-              <option value="vampires" id="vampires">Vampires</option>
+            <select name="hero" id="hero" class="hero">
+              <option value="humans" class="humans">Humans</option>
+              <option value="orcs" class="orcs">Orcs</option>
+              <option value="elves" class="elves">Elves</option>
+              <option value="vampires" class="vampires">Vampires</option>
             </select>
           </form>
-          <aside id="aside_humans">
-            <h3>Humans</h3>
+          <aside class="aside_humans">
+            <p>Humans</p>
             <img src="Logos/humans.png" alt="humans picture" />
             <p>20% less damage taken.</p>
           </aside>
-          <aside id="aside_orcs">
-            <h3>Orcs</h3>
+          <aside class="aside_orcs">
+            <p>Orcs</p>
             <img src="Logos/orc.png" alt="Orcs picture" />
             <p>40% more max health</p>
           </aside>
-          <aside id="aside_elves">
-            <h3>Elves</h3>
+          <aside class="aside_elves">
+            <p>Elves</p>
             <img src="Logos/elves.png" alt="Elves picture" />
             <p>
               30% chance to deflect the attack back to the opponent. <br />
@@ -45,8 +51,8 @@
               elf takes no damage.
             </p>
           </aside>
-          <aside id="aside_vampires">
-            <h3>Vampires</h3>
+          <aside class="aside_vampires">
+            <p>Vampires</p>
             <img src="Logos/vampires.png" alt="Vampires picture" />
             <p>
               10% lifesteal from opponents current health at start of the
@@ -57,22 +63,22 @@
         <h2>Items</h2>
         <section class="items1">
           <button type="button" value="boots">
-            <h4>Boots</h4>
+            <p>Boots</p>
             <img src="Logos/boots.png" alt="Boots" />
             <p class="specs">30% chance to dodge an attack</p>
           </button>
           <button type="button" value="staff">
-            <h4>Staff</h4>
+            <p>Staff</p>
             <img src="Logos/staff.png" alt="Staff" />
             <p class="specs">20% increase in healing</p>
           </button>
           <button type="button" value="sword">
-            <h4>sword</h4>
+            <p>sword</p>
             <img src="Logos/sword.png" alt="Sword" />
             <p class="specs">30% more damage</p>
           </button>
           <button type="button" value="bow">
-            <h4>Bow</h4>
+            <p>Bow</p>
             <img src="Logos/bow.png" alt="Bow" />
             <p class="specs">30% chance to attack twice</p>
           </button>
@@ -88,28 +94,34 @@
         <h2>Player 2</h2>
         <section id="player2">
           <form class="form">
-            <label for="name">What's gone be your Hero's name?:</label>
-            <input type="text" name="name" class="name" autocomplete="off" />
-            <label for="hero">Choose your Hero:</label>
-            <select name="hero" class="hero">
-              <option value="humans" id="humans">Humans</option>
-              <option value="orcs" id="orcs">Orcs</option>
-              <option value="elves" id="elves">Elves</option>
-              <option value="vampires" id="vampires">Vampires</option>
+            <label for="name2">What's gone be your Hero's name?:</label>
+            <input
+              type="text"
+              name="name2"
+              id="name2"
+              class="name"
+              autocomplete="off"
+            />
+            <label for="hero2">Choose your Hero:</label>
+            <select name="hero2" id="hero2" class="hero">
+              <option value="humans" class="humans">Humans</option>
+              <option value="orcs" class="orcs">Orcs</option>
+              <option value="elves" class="elves">Elves</option>
+              <option value="vampires" class="vampires">Vampires</option>
             </select>
           </form>
-          <aside id="aside_humans">
-            <h3>Humans</h3>
+          <aside class="aside_humans">
+            <p>Humans</p>
             <img src="Logos/humans.png" alt="humans picture" />
             <p>20% less damage taken.</p>
           </aside>
-          <aside id="aside_orcs">
-            <h3>Orcs</h3>
+          <aside class="aside_orcs">
+            <p>Orcs</p>
             <img src="Logos/orc.png" alt="Orcs picture" />
             <p>40% more max health.</p>
           </aside>
-          <aside id="aside_elves">
-            <h3>Elves</h3>
+          <aside class="aside_elves">
+            <p>Elves</p>
             <img src="Logos/elves.png" alt="Elves picture" />
             <p>
               30% chance to deflect the attack back to the opponent. <br />The
@@ -117,8 +129,8 @@
               takes no damage.
             </p>
           </aside>
-          <aside id="aside_vampires">
-            <h3>Vampires</h3>
+          <aside class="aside_vampires">
+            <p>Vampires</p>
             <img src="Logos/vampires.png" alt="Vampires picture" />
             <p>
               10% lifesteal from opponents current health at start of the
@@ -129,22 +141,22 @@
         <h2>Items</h2>
         <section class="items2">
           <button type="submit" value="boots">
-            <h4>Boots</h4>
+            <p>Boots</p>
             <img src="Logos/boots.png" alt="Boots" />
             <p class="specs">30% chance to dodge an attack</p>
           </button>
           <button type="submit" value="staff">
-            <h4>Staff</h4>
+            <p>Staff</p>
             <img src="Logos/staff.png" alt="Staff" />
             <p class="specs">20% increase in healing</p>
           </button>
           <button type="submit" value="sword">
-            <h4>Sword</h4>
+            <p>Sword</p>
             <img src="Logos/sword.png" alt="Sword" />
             <p class="specs">30% more damage</p>
           </button>
           <button type="submit" value="bow">
-            <h4>Bow</h4>
+            <p>Bow</p>
             <img src="Logos/bow.png" alt="Bow" />
             <p class="specs">30% chance to attack twice</p>
           </button>
